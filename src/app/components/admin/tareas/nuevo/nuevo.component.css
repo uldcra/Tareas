@@ -1,0 +1,10 @@
+.form-tareas {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width:768px) {
+    .form-tareas {
+        width: 90%;
+    }
+}

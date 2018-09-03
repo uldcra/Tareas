@@ -1,0 +1,31 @@
+<div style="width:90%;margin:0 auto;">
+
+
+
+
+
+    <form #f="ngForm" (ngSubmit)="guardarTarea()" novalidate role="form">
+        <legend>Form title</legend>
+
+        <div class="form-group">
+            <label for="">id</label>
+            <input disable [(ngModel)]="tarea.id" #idunico="ngModel" name="id" type="text" class="form-control" id="" placeholder="Input field">
+        </div>
+        <div class="form-group">
+            <label for="">Nombre de la tarea</label>
+            <input [(ngModel)]="tarea.Nombre" #tareaunico="ngModel" name="tarea" type="text" class="form-control" id="" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+            <label for="">Descripcion de la tarea</label>
+            <textarea [(ngModel)]="tarea.Descripcion" name="descripcion" #descripcion="ngModel" id="input${1/(\w+)/\u\1/g}" class="form-control" rows="3" required="required">
+           
+            </textarea>
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+
+</div>

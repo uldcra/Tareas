@@ -1,0 +1,40 @@
+.naranja {
+    background-color: rgb(255, 186, 89);
+}
+
+.naranja a {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background-color: #f59323;
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: #f59323;
+    transform: scale(1.2);
+}
+
+.dropdown-menu>li>a,
+.dropdown-menu>li>a {
+    transition: 0.2s all linear;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    background-color: #f59323;
+}
+
+@media screen and (max-width:767px) {
+    .dropdown-menu>li>a:focus,
+    .dropdown-menu>li>a:hover {
+        background-color: #f59323;
+        transform: scale(1);
+    }
+    .dropdown-menu>li:hover {
+        background-color: #f59323;
+    }
+}

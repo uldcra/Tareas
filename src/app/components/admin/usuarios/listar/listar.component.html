@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Comentarios</th>
+                <th>Opiones</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let lusuario of ListaUsusarios">
+                <td>{{lusuario.id}}</td>
+                <td>{{lusuario.Nombre}}</td>
+                <td>{{lusuario.comentarios}}</td>
+                <td>
+                    <button type="button" class="btn btn-info" (click)="EditarUsuarios(lusuario.id)">Editar</button>
+                    <button type="button" class="btn btn-danger" (click)="EliminarUsuarios(lusuario.id)">Eliminar</button>
+
+                    <button type="button" class="btn btn-warning" (click)="asignar(id)">Asignar</button>
+
+                </td>
+
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <button type="button" class="btn btn-info" (click)="ListaUsuarios()">Listar</button>
+
+
+</div>

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+    <div class="contenedor-formulario">
+        <form #f="ngForm" (ngSubmit)="ponerEmpleado()" novalidate>
+            <div class="form-group" *ngIf=false>
+                <label for="exampleInputEmail1">Id</label>
+                <input disabled="text" class="form-control" id="exampleInputId" name="id" #id="ngModel" [(ngModel)]="primero">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputNombre">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputNombre" name="nombre" #nombre="ngModel" [(ngModel)]="empleado.nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input name="passw" type="password" #passw="ngModel" [(ngModel)]="empleado.password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="exampleComment">Comentarios</label>
+                <textarea class="form-control" rows="5" id="comment" name="coment" #coment="ngModel" [(ngModel)]="empleado.comentarios"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Tipo</label>
+                <select class="form-control" id="sel1" name="tipo" #tipo="ngModel" [(ngModel)]="empleado.tipo">
+                  <option>admin</option>
+                  <option>usuario</option>
+                 
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Crear</button>
+        </form>
+    </div>
+    {{coment.value}} <br>{{coment.valid}}
+</div>
+<div *ngIf="mensajeError">
+    <h4>Hay un datos por rellenar</h4>
+</div>

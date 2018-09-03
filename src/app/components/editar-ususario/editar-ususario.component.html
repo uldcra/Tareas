@@ -1,0 +1,34 @@
+<div class="contenedor-formulario">
+    <form #formData="ngForm" (ngSubmit)="Editar()" novalidate>
+        <div *ngFor="let usuar of usuario">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Id</label>
+                <input type="text" class="form-control" id="idtf" name="idtf" #idtf="ngModel" [(ngModel)]="usuar.id">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputNombre">Nombres</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="name" #name="ngModel" [(ngModel)]="usuar.Nombre">
+            </div>
+            {{usuar.tipo}}
+            <div class="form-group">
+                <select #roles="ngModel" [(ngModel)]="usuar.tipo" name="tipos" class="form-control" (ngModelChange)="ajustarValor($event)">
+                <option value="usuario" [selected]="usuar.tipo == usuario">usuario</option>
+                <option value="admin" [selected]="usuar.tipo == admin">admin</option>
+                </select>
+            </div>
+            <!---<div class="form-group">
+                <label for="tipo">tipo</label>
+                <input name="tipo" type="text" #tipos="ngModel" [(ngModel)]="usuar.tipo" class="form-control" id="Tipo">
+            </div>-->
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input name="passw" type="password" #passw="ngModel" [(ngModel)]="usuar.passwd" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputcomentarios">Comentarios</label>
+                <input type="text" class="form-control" id="comentar" name="comment" #comment="ngModel" [(ngModel)]="usuar.comentarios">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Editar</button>
+    </form>
+</div>

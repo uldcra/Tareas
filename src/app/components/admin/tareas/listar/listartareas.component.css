@@ -1,0 +1,10 @@
+.form-listar-tareas {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width:768px) {
+    .form-listar-tareas {
+        width: 90%;
+    }
+}

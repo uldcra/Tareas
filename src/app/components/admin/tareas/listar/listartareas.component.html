@@ -1,0 +1,27 @@
+<div class="form-listar-tareas">
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tarea of listarTareasa">
+                <td>{{tarea.id}}</td>
+                <td>{{tarea.Nombre}}</td>
+                <td>{{tarea.Descripcion}}</td>
+                <td>
+                    <button type="button" class="btn btn-info" (click)="Editar(tarea.id)">Editar</button>
+
+                    <button type="button" class="btn btn-warning" (click)="Eliminar(tarea.id)">Eliminar</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="text-success">Registro eliminado</p>
+</div>

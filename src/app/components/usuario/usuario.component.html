@@ -1,0 +1,44 @@
+<div class="container">
+    <form #formUser="ngForm">
+        <legend>Form title</legend>
+
+        <div class="form-group">
+            <label for="">label</label>
+            <input type="text" class="form-control" id="" name="nombre" #name="ngModel" placeholder="Input field" [(ngModel)]="nombre">
+        </div>
+
+
+
+
+    </form>
+    <br>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>tarea</th>
+                <th>fecha</th>
+                <th>estado</th>
+                <th>fecha</th>
+                <th>opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mytarea of ListaTareaUsuario">
+
+                <td>{{mytarea.Nombre}}</td>
+                <td>{{mytarea.fecha}}</td>
+                <td>{{mytarea.estado}}</td>
+                <td>{{mytarea.fecha}}</td>
+                <td>
+
+                    <button type="button" class="btn btn-success" (click)="pendiente(mytarea.id)">Pendiente</button>
+                    <button type="button" class="btn btn-info" (click)="enCurso(mytarea.id)">en curso</button>
+                    <button type="button" class="btn btn-warning" (click)="acabada(mytarea.id)">acabada</button>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
